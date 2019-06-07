@@ -56,6 +56,10 @@ static const int kStateKey;
         return;
     }
     
+    if(keyboardRect.size.height < 100) { //sanity check that prevents show events when keyboard has accessory view
+        return;
+    }
+    
     if ( state.ignoringNotifications ) {
         return;
     }
